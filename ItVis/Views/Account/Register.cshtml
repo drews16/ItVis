@@ -1,0 +1,20 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model ItVis.ViewModel.RegisterViewModel
+
+<form method="post" action="/Account/Register">
+    <div class="register-form">
+        <div class="register-form-content">
+            <div class="register-form-title"><p>Регистрация</p></div>
+                <label asp-for="Name" class=name>Имя</label>
+                <input asp-for="Name" class="register-form-name" type="text" name="Name"/>
+                <span asp-validation-for="Name"></span>
+                <label>Номер телефона</label>
+                <input class="register-form-phone" type="text" placeholder="+7-XXX-XXX-XX-XX" value="+7" name="model.Phone"/>
+                <label>Пароль</label>
+                <input class="register-form-password" type="password" name="model.Password"/>
+                <input class="register-form-btn" type="submit" value="Зарегистрироваться"/>
+            <div asp-validation-summary="All"></div>
+        </div>
+    </div>
+</form>
+

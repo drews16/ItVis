@@ -1,0 +1,537 @@
+﻿@media screen and (min-width: 1600px) {
+    /********************* 
+            Header. 
+    *********************/
+    .header {
+        width: 100%;
+        z-index: 100;
+        background: var(--white);
+    }
+
+    .header-content {
+        display: flex;
+        height: 8.125rem;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .logo {
+        width: 30%;
+    }
+
+    .logo > a > img {
+        object-fit: cover;
+        height: auto;
+        width: 100%;
+    }
+
+    .main-nav > ul > li {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 1.1rem;
+        padding: 1rem;
+        color: #a5a5a5;
+    }
+
+     .main-nav > ul > li:hover,
+     .main-nav > ul > .hassubs > ul > li > a:hover {
+         color: var(--hover-color);
+         transition: 0.5s ease;
+     }
+
+    .hassubs > ul {
+        display: none;
+        padding-right: 2.1rem;
+	    padding-left: 3.1rem;
+	    padding-top: 2rem;
+	    padding-bottom: 2.1rem;
+    }
+
+    .main-nav > ul > .hassubs:hover > ul {
+        display: flex;
+        position: absolute;
+        top: 5rem;
+        flex-direction: column;
+        background: var(--white);
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    .main-nav > ul > .hassubs > ul > li > a {
+        color: #a5a5a5;
+    }
+
+    .main-nav > ul > .hassubs > ul > li {
+        margin-bottom: 1rem;
+    }
+    
+    .profile,
+    .shopping-cart {
+        display: inline-block;
+        padding: 1rem;
+    }
+
+    .shopping-cart {
+        padding-right: 2rem;
+    }
+
+    .header-extra, .profile {
+        display: flex;
+        align-items: center;
+    }
+
+    .profile {
+        padding-right: 0;
+    }
+
+    .profile > p {
+        color: black;
+        font-size: 1rem;
+    }
+
+    .profile > p:hover {
+        color: blue;
+        transition: 0.5s all;
+        cursor: default;
+    }
+
+    .profile > img,
+    .profile > a {
+        vertical-align: middle;
+        font-size: 1.1rem;
+        color: black;
+    }
+
+    .profile > a:hover {
+        color: blue;
+        transition: 0.5s all;
+    }
+
+    .account-action {
+        display: none;
+    }
+
+    .profile:hover > .account-action {
+        display: flex;
+        top: 5rem;
+        position: absolute;
+        background: white;
+        border: 2px solid blue;
+    }
+
+    .account-action > a {
+        padding: 0.5rem 2rem;
+        color: black;
+        font-size: 1rem;
+    }
+
+    .account-action > a:hover {
+        background: blue;
+        color: white;
+        transition: 0.5s ease;
+    }
+
+    .shopping-cart > a > svg {
+        display: inline-block;
+        width: 1.45rem;
+        height: 1.45rem;
+        vertical-align: middle;
+    }
+
+    .shopping-cart > a > div {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 1rem;
+        font-size: 1.1rem;
+        color: black;
+    }
+
+    .shopping-cart > a:hover > svg,
+    .shopping-cart > a:hover > div {
+        fill: var(--hover-color);  
+        color: var(--hover-color);
+        transition: 0.5s ease;
+    } 
+
+    .search-panel {
+        display: flex;
+        align-items: center;
+    }
+ 
+    .search-input {
+        width: 30rem;
+        height: 2.5rem;
+        border: 1px solid blue;
+        font-size: 1rem;
+        padding-left: 1rem;
+        border-radius: 0.25rem;
+    }
+
+    .search-input::placeholder {
+        font-style: italic;
+        font-size: 1rem;
+    }
+
+    .search-btn {
+        height: 2.5rem;
+        width: 4rem;
+        border: 1px solid blue;
+        border-radius: 0.25rem;
+        background: white;
+        font-size: 0.9rem;
+    }
+
+    .search-btn:hover {
+        background: blue;
+        color: white;
+        transition: 0.5s ease;  
+    }
+
+    /***************
+        Footer.
+    ***************/
+    .footer {
+        width: 100%;
+        height: 17rem;
+        background: #a5a5a524;
+    }
+
+    .footer-content {
+        display: flex;
+        width: 100%;
+        height: 17rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-logo {
+        width: 20%;
+    }
+
+    .footer-logo > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .copyright {
+        color: black;
+        font-size: 1rem;
+    }
+
+    .footer-social {
+        width: 1.5rem;
+    }
+
+    /*************************
+        Main.
+    *************************/
+    .home {
+        width: 100%;
+        height: 49.375rem;
+        position: relative;
+    } 
+
+    .home-slider-container {
+        height: 100%;
+        padding: 0 2.5rem;
+    }
+
+    .home-slider-background {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .home-slider-content {
+        position: absolute;
+        margin-left: 8rem;
+        top: 50%;
+    }
+
+    .home-slider-title {
+        font-size: 4.5rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: var(--white);
+    }
+
+    .home-slider-subtitle {
+        font-size: 1.1rem;
+        line-height: 2.4;
+        color: var(--white);
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;        
+        top: 50%;
+        padding: 1rem;
+        width: auto;
+        color: red;
+        font-weight: bold;
+        font-size: 4rem;
+        transition: 0.5s ease;
+    }
+
+    .prev {
+        margin-left: 3rem;
+    }
+
+    .next {
+        right: 0;
+        margin-right: 3rem;
+    }
+
+    .prev:hover,
+    .next:hover {
+        background-color: grey;
+        transition: 0.5s all;
+    }
+
+    .product-category-container {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 5rem;
+    }
+
+    .product-category {
+        width: 30%;
+        height: 10rem; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        margin: 1rem;
+    }
+
+    .product-category > a {
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+    }
+
+    .product-category > a:hover {
+        color: #27f1f4;
+        transition: 0.5s all;
+    }
+
+    /******************
+        Account.
+    ******************/
+    .login-form,
+    .register-form {
+        width: 100%;
+    }
+
+    .login-form-content,
+    .register-form-content {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        padding: 2rem;
+        color: black;
+        margin: 1rem auto;
+        border: 1px solid blue;
+    }
+
+    .login-form-title,
+    .register-form-title {
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin: 1rem auto;
+    }
+
+    .login-form-content > label,
+    .register-form-content > label {
+        font-weight: 600;
+    }
+    
+    .login-form-phone, .login-form-password,
+    .register-form-name, .register-form-phone, .register-form-password {
+        margin-bottom: 1.25rem;
+    }
+
+    .login-form-btn,
+    .register-form-btn {
+        margin: 1rem auto;
+        font-size: 1rem;
+        background: none;
+        padding: 0.25rem 1rem;
+        border: 2px solid blue;
+    }
+
+    .login-form-btn:hover,
+    .register-form-btn:hover {
+        background: blue;
+        transition: 0.5s ease;
+        color: white;
+    }
+
+    .register-link {
+        text-align: center;
+    }
+
+    .register-link > a:hover {
+        color: blue;
+        transition: 0.5s ease;
+    }
+
+    /*****************
+        ProductList.
+    ******************/
+    .products {
+        display: flex;
+        width: 100%;
+    }
+
+    .filters {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+    }
+
+    .product {
+        display: flex;
+        width: 80%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .product-icon {
+        display: flex;
+        width: 21%;
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .product-img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .product-img > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-title,
+    .product-price {
+        color: black;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+    }
+
+    .product-title:hover {
+        color: blue;
+        transition: 0.5s all;
+    }
+
+    .pagination {
+        display: flex;
+        color: black;
+        margin: 1rem;
+        justify-content: center;
+    }
+
+    .pagination > li {
+        border: 1px solid blue;
+    }
+
+    .pagination > li > a {
+        padding: 0.8rem;
+    }
+
+    .active-page {
+        background: blue;
+        color: white;
+    }
+
+    /**********************
+        Product Details.
+    **********************/
+    .product-details {
+        display: flex;
+        padding: 3rem 0;
+    }
+   
+    .product-details-img {
+        width: 30%;
+        margin-right: 3rem;
+    }
+
+    .product-details-img > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .product-details-title {
+        color: black;
+        font-weight: 600;
+        font-size: 2.5rem;
+        padding-bottom: 6rem;
+    }
+
+    .product-details-price {
+        color: black;
+        font-weight: 600;
+        font-size: 2rem;
+        padding-top: 6rem;
+    }
+
+    .cart-btn {
+        display: flex;
+        width: fit-content;
+        border: 3px solid blue;
+        padding: 1rem 2rem;
+        margin-top: 2rem;
+    }
+
+    .cart-btn > a {
+        font-size: 1rem;
+        font-weight: 600;
+        color: black;
+    }
+
+    .cart-btn:hover,
+    .cart-btn:hover > a {
+        background: blue;
+        color: white;
+        transition: 0.8s all;
+    }
+
+    .product-property {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        color: black;
+    }
+
+    .product-property-content {
+        display: flex;
+        width: 40%;
+    }
+
+    .product-property-content > p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .property-value {
+        margin-left: auto;
+    }
+}
+

@@ -1,0 +1,40 @@
+﻿:root {
+    --hover-color: #007bff;
+    --white: #fff;
+    --indigo: #6610f2;
+    --grey: #868e96;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: white;
+}
+p {
+    font-family: 'Poppins', sans-serif;
+}
+a, a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+ul {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 1600px) {
+    .container {
+        padding: 0 20px;
+        max-width: 1570px;
+        margin: 0 auto;
+    }
+}
+

@@ -1,0 +1,47 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@* Home ads slider. *@ 
+<div class="home">
+     <div class="home-slider-container">
+        <div class="home-slider-background" style="background-image:url(../img/abs/home_slider_1.jpg)"></div>
+        <div class="home-slider-content">
+            <div class="home-slider-title"></div>
+            <div class="home-slider-subtitle"></div>
+        </div>    
+     </div>
+     <div class="home-slider-container">
+        <div class="home-slider-background" style="background-image:url(../img/abs/car.jpg)"></div>
+        <div class="home-slider-content">
+            <div class="home-slider-title"></div>
+            <div class="home-slider-subtitle"></div>
+        </div>    
+     </div>
+
+     <a class="prev" onclick="minusSlide()">&#10094;</a>
+     <a class="next" onclick="plusSlide()">&#10095;</a>
+ </div>
+
+ <div class="slider-dots">
+     <span class="slider-dots-item"></span>
+     <span class="slider-dots-item"></span>
+     <span class="slider-dots-item"></span>
+ </div>
+
+ @* Product category *@
+ <div class="product-category-container">
+    @{
+        foreach(var item in Model!.ProductTypes)
+        {
+            <div class="product-category" style="background-image: url(@item.Img)">
+                <a asp-controller="Product" asp-action="ProductList" asp-route-category="@item.TypeName">
+                    @item.TypeName
+                </a>
+            </div>
+        }
+    }
+</div>
+
+
+
+
+

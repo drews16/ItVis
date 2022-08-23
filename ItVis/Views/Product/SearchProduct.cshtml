@@ -1,0 +1,25 @@
+﻿@addTagHelper *, ItVis
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div class="products">
+    <div class="filters">
+        <div class="filter-title">
+            Бренд
+        </div>
+        <div class="filter-values">Amd</div>
+    </div>
+    <div class="product">
+    @{
+        foreach(var item in Model!.Products)
+        {
+            <a class="product-icon" asp-controller="Product" asp-action="Property"
+                asp-route-id="@item.Id">
+                <div class="product-img"><img src="@item.Img" /></div>
+                <div class="product-title">@item.Brand.BrandName @item.Model</div>
+                <div class="product-price">@item.Price.ToString("c")</div>
+           </a>
+        }
+    }
+    </div>
+</div>
+<search-page-link page-model="@Model.PageInfo" search-string="@Model.SearchString" page-action="SearchProduct"></search-page-link>
